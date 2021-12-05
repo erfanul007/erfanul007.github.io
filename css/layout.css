@@ -210,28 +210,28 @@ ul#nav li.current a { color: #124B63; }
 }
 #about .profile-pic {
    position: relative;
-   width: 120px;
-   height: 120px;
+   width: 150px;
+   height: 150px;
    border-radius: 100%;
 }
 #about .contact-details {
   width: 41.66667%;
 }
 #about .download {
-   width: 58.33333%;
+   width: 30%;
    padding-top: 6px;
 }
 #about .main-col { padding-right: 5%; }
 #about .download .button {
    margin-top: 6px;
-   background: #444;
+   background: #2B2B2B;
 }
 #about .download .button:hover {
    background: #fff;
    color: #2B2B2B;
 }
 #about .download .button i {
-   margin-right: 15px;
+   margin-right: 5px;
    font-size: 20px;
 }
 
@@ -251,12 +251,12 @@ ul#nav li.current a { color: #124B63; }
 #resume a, #resume a:visited  { color: #11ABB0; }
 #resume a:hover, #resume a:focus { color: #313131; }
 
-#resume h1, #experience h1 {
+#resume h1, #experience h1, #projects h1, #about h1{
    font: 18px/24px 'opensans-bold', sans-serif;
    text-transform: uppercase;
    letter-spacing: 1px;
 }
-#resume h1 span, #experience h1 span {
+#resume h1 span, #experience h1 span, #projects h1 span, #about h1 span{
    border-bottom: 3px solid #124B63;
    padding-bottom: 6px;
 }
@@ -267,18 +267,24 @@ ul#nav li.current a { color: #124B63; }
 #resume .header-col { padding-top: 9px; }
 #resume .main-col { padding-right: 10%; }
 
-.education, .skill, .contests, .volunteer {
+.education, .skill, .contests{
    margin-bottom: 48px;
    padding-bottom: 24px;
    border-bottom: 1px solid #E8E8E8;
 }
-#resume .info, #experience .info {
+.about, .projects, .volunteer{
+   margin-bottom: 48px;
+   padding-bottom: 24px;
+   border-bottom: 1px solid #D0D0D0;
+}
+
+#resume .info, #experience .info, #projects .info {
    font: 16px/24px 'librebaskerville-italic', serif;
    color: #6E7881;
    margin-bottom: 18px;
    margin-top: 9px;
 }
-#resume .info span, #experience .info span {
+#resume .info span, #experience .info span, #projects .info span {
    margin-right: 5px;
    margin-left: 5px;
 }
@@ -297,6 +303,11 @@ ul#nav li.current a { color: #124B63; }
 /*	Skill Bars
 /*----------------------------------------------*/
 
+.expert{
+   border-bottom: 0px !important;
+   color: #0000FF !important;
+}
+
 .bars {
 	width: 95%;
 	float: left;
@@ -308,7 +319,7 @@ ul#nav li.current a { color: #124B63; }
   margin-bottom: 60px;
 }
 .bars .skills {
-  	margin-top: 36px;
+  	margin-top: 60px;
    list-style: none;
 }
 .bars li {
@@ -342,22 +353,27 @@ ul#nav li.current a { color: #124B63; }
 }
 
 .cpp {
-  	width: 85%;
+  	width: 90%;
   	-moz-animation: cpp 1s ease;
   	-webkit-animation: cpp 1s ease;
 }
-.java {
-  	width: 55%;
-  	-moz-animation: java 1s ease;
-  	-webkit-animation: java 1s ease;
-}
 .python {
-  	width: 40%;
+  	width: 75%;
   	-moz-animation: python 1s ease;
   	-webkit-animation: python 1s ease;
 }
+.java {
+  	width: 60%;
+  	-moz-animation: java 1s ease;
+  	-webkit-animation: java 1s ease;
+}
+.javascript {
+  	width: 55%;
+  	-moz-animation: javascript 1s ease;
+  	-webkit-animation: javascript 1s ease;
+}
 .html {
-    width: 70%;
+    width: 68%;
     -moz-animation: html 1s ease;
     -webkit-animation: html 1s ease;
 }
@@ -366,77 +382,139 @@ ul#nav li.current a { color: #124B63; }
   	-moz-animation: css 1s ease;
   	-webkit-animation: css 1s ease;
 }
-.javascript {
-  	width: 35%;
-  	-moz-animation: javascript 1s ease;
-  	-webkit-animation: javascript 1s ease;
+.django {
+  	width: 65%;
+  	-moz-animation: django 1s ease;
+  	-webkit-animation: django 1s ease;
 }
-.php {
-    width: 15%;
-    -moz-animation: php 1s ease;
-    -webkit-animation: php 1s ease;
+.android {
+  	width: 45%;
+  	-moz-animation: android 1s ease;
+  	-webkit-animation: android 1s ease;
 }
+.nodejs {
+  	width: 25%;
+  	-moz-animation: nodejs 1s ease;
+  	-webkit-animation: nodejs 1s ease;
+}
+.algorithms {
+  	width: 80%;
+  	-moz-animation: algorithms 1s ease;
+  	-webkit-animation: algorithms 1s ease;
+}
+.datastuctures {
+  	width: 75%;
+  	-moz-animation: datastuctures 1s ease;
+  	-webkit-animation: datastuctures 1s ease;
+}
+
 
 @-moz-keyframes cpp {
   0%   { width: 0px;  }
-  100% { width: 85%;  }
-}
-@-moz-keyframes java {
-  0%   { width: 0px;  }
-  100% { width: 55%;  }
+  100% { width: 90%;  }
 }
 @-moz-keyframes python {
   0%   { width: 0px;  }
-  100% { width: 40%;  }
+  100% { width: 75%;  }
+}
+@-moz-keyframes java {
+  0%   { width: 0px;  }
+  100% { width: 60%;  }
+}
+@-moz-keyframes javascript {
+  0%   { width: 0px;  }
+  100% { width: 55%;  }
 }
 @-moz-keyframes html {
   0%   { width: 0px;  }
-  100% { width: 70%;  }
+  100% { width: 68%;  }
 }
 @-moz-keyframes css {
   0%   { width: 0px;  }
   100% { width: 30%;  }
 }
-@-moz-keyframes javascript {
+@-moz-keyframes django {
   0%   { width: 0px;  }
-  100% { width: 35%;  }
+  100% { width: 65%;  }
 }
-@-moz-keyframes php {
+@-moz-keyframes android {
   0%   { width: 0px;  }
-  100% { width: 15%;  }
+  100% { width: 45%;  }
 }
+@-moz-keyframes nodejs {
+  0%   { width: 0px;  }
+  100% { width: 25%;  }
+}
+@-moz-keyframes algorithms {
+  0%   { width: 0px;  }
+  100% { width: 80%;  }
+}
+@-moz-keyframes datastuctures {
+  0%   { width: 0px;  }
+  100% { width: 75%;  }
+}
+
 
 @-webkit-keyframes cpp {
   0%   { width: 0px;  }
-  100% { width: 85%;  }
-}
-@-webkit-keyframes java {
-  0%   { width: 0px;  }
-  100% { width: 55%;  }
+  100% { width: 90%;  }
 }
 @-webkit-keyframes python {
   0%   { width: 0px;  }
-  100% { width: 40%;  }
+  100% { width: 75%;  }
+}
+@-webkit-keyframes java {
+  0%   { width: 0px;  }
+  100% { width: 60%;  }
+}
+@-webkit-keyframes javascript {
+  0%   { width: 0px;  }
+  100% { width: 55%;  }
 }
 @-webkit-keyframes html {
   0%   { width: 0px;  }
-  100% { width: 70%;  }
+  100% { width: 68%;  }
 }
 @-webkit-keyframes css {
   0%   { width: 0px;  }
   100% { width: 30%;  }
 }
-@-webkit-keyframes javascript {
+@-webkit-keyframes django {
   0%   { width: 0px;  }
-  100% { width: 35%;  }
+  100% { width: 65%;  }
 }
-@-webkit-keyframes php {
+@-webkit-keyframes android {
   0%   { width: 0px;  }
-  100% { width: 15%;  }
+  100% { width: 45%;  }
+}
+@-webkit-keyframes nodejs {
+  0%   { width: 0px;  }
+  100% { width: 25%;  }
+}
+@-webkit-keyframes algorithms {
+  0%   { width: 0px;  }
+  100% { width: 80%;  }
+}
+@-webkit-keyframes datastuctures {
+  0%   { width: 0px;  }
+  100% { width: 75%;  }
+}
+
+
+/* ------------------------------------------------------------------ */
+/* e. projects Section
+/* ------------------------------------------------------------------ */
+
+#projects {
+   background: #fff;
+   opacity: 94%;
+   padding-top: 90px;
+   padding-bottom: 72px;
+   overflow: hidden;
 }
 
 /* ------------------------------------------------------------------ */
-/* e. experience Section
+/* f. experience Section
 /* ------------------------------------------------------------------ */
 
 #experience {
