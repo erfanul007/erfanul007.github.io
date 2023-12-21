@@ -52,7 +52,7 @@ header .banner {
    vertical-align: middle;
    margin: 0 auto;
    width: 85%;
-   padding-bottom: 30px;s
+   padding-bottom: 30px;
    text-align: center;
 }
 
@@ -196,6 +196,53 @@ ul#nav li.current a { color: #124B63; }
    overflow: hidden;
 }
 
+#experience {
+   background: #fff;
+   opacity: 95%;
+   padding-top: 90px;
+   padding-bottom: 72px;
+   overflow: hidden;
+}
+
+#projects {
+   background: #fff;
+   opacity: 90%;
+   padding-top: 90px;
+   padding-bottom: 72px;
+   overflow: hidden;
+}
+
+#skill {
+   background: #fff;
+   opacity: 95%;
+   padding-top: 90px;
+   padding-bottom: 90px;
+   overflow: hidden;
+}
+
+#contest {
+   background: #fff;
+   opacity: 90%;
+   padding-top: 90px;
+   padding-bottom: 90px;
+   overflow: hidden;
+}
+
+#resume{
+   background: #fff;
+   opacity: 95%;
+   padding-top: 90px;
+   padding-bottom: 90px;
+   overflow: hidden;
+}
+
+#contact {
+   background: #124B63;
+   padding-top: 96px;
+   padding-bottom: 102px;
+   color: #636363;
+}
+
 #about a, #about a:visited  { color: #fff; }
 #about a:hover, #about a:focus { color: #11ABB0; }
 
@@ -240,27 +287,19 @@ ul#nav li.current a { color: #124B63; }
 /* d. Resume Section
 /* ------------------------------------------------------------------ */
 
-#resume {
-   background: #fff;
-   padding-top: 90px;
-   padding-bottom: 90px;
-   overflow: hidden;
-}
-
-
 #resume a, #resume a:visited  { color: #11ABB0; }
 #resume a:hover, #resume a:focus { color: #313131; }
 
-#resume h1, #experience h1, #projects h1, #about h1{
+#resume h1, #experience h1, #projects h1, #about h1, #skill h1, #contest h1{
    font: 18px/24px 'opensans-bold', sans-serif;
    text-transform: uppercase;
    letter-spacing: 1px;
 }
-#resume h1 span, #experience h1 span, #projects h1 span, #about h1 span{
+#resume h1 span, #experience h1 span, #projects h1 span, #about h1 span, #skill h1 span, #contest h1 span{
    border-bottom: 3px solid #124B63;
    padding-bottom: 6px;
 }
-#resume h3 {
+#resume h3, #skill h3, #contest h3 {
    font: 25px/30px 'opensans-bold', sans-serif;
 }
 
@@ -278,25 +317,26 @@ ul#nav li.current a { color: #124B63; }
    border-bottom: 1px solid #D0D0D0;
 }
 
-#resume .info, #experience .info, #projects .info {
+#resume .info, #experience .info, #projects .info, #skill .info, #contest .info {
    font: 16px/24px 'librebaskerville-italic', serif;
    color: #6E7881;
    margin-bottom: 18px;
    margin-top: 9px;
 }
-#resume .info span, #experience .info span, #projects .info span {
+#resume .info span, #experience .info span, #projects .info span, #skill .info span, #contest .info span{
    margin-right: 5px;
    margin-left: 5px;
 }
-#resume .date, #experience .date {
+#resume .date, #experience .date, #skill .date, #contest .date {
    font: 15px/24px 'opensans-regular', sans-serif;
    margin-top: 6px;
 }
 
-#judges {
+.bullet-list {
   list-style: circle inside;
   padding-left: 25px;
   padding-bottom: 20px;
+  list-style-position: outside;
 }
 
 /*----------------------------------------------*/
@@ -352,6 +392,18 @@ ul#nav li.current a { color: #124B63; }
    border-radius: 3px 0 0 3px;
 }
 
+
+
+.csharp {
+   width: 95%;
+   -moz-animation: csharp 1s ease;
+   -webkit-animation: csharp 1s ease;
+}
+.database {
+   width: 90%;
+   -moz-animation: database 1s ease;
+   -webkit-animation: database 1s ease;
+}
 .cpp {
   	width: 90%;
   	-moz-animation: cpp 1s ease;
@@ -363,17 +415,17 @@ ul#nav li.current a { color: #124B63; }
   	-webkit-animation: python 1s ease;
 }
 .java {
-  	width: 60%;
+  	width: 65%;
   	-moz-animation: java 1s ease;
   	-webkit-animation: java 1s ease;
 }
 .javascript {
-  	width: 55%;
+  	width: 80%;
   	-moz-animation: javascript 1s ease;
   	-webkit-animation: javascript 1s ease;
 }
 .html {
-    width: 68%;
+    width: 90%;
     -moz-animation: html 1s ease;
     -webkit-animation: html 1s ease;
 }
@@ -383,32 +435,40 @@ ul#nav li.current a { color: #124B63; }
   	-webkit-animation: css 1s ease;
 }
 .django {
-  	width: 65%;
+  	width: 60%;
   	-moz-animation: django 1s ease;
   	-webkit-animation: django 1s ease;
 }
 .android {
-  	width: 45%;
+  	width: 50%;
   	-moz-animation: android 1s ease;
   	-webkit-animation: android 1s ease;
 }
 .nodejs {
-  	width: 25%;
+  	width: 30%;
   	-moz-animation: nodejs 1s ease;
   	-webkit-animation: nodejs 1s ease;
 }
 .algorithms {
-  	width: 80%;
+  	width: 85%;
   	-moz-animation: algorithms 1s ease;
   	-webkit-animation: algorithms 1s ease;
 }
-.datastuctures {
-  	width: 75%;
-  	-moz-animation: datastuctures 1s ease;
-  	-webkit-animation: datastuctures 1s ease;
+.git {
+   width: 85%;
+   -moz-animation: git 1s ease;
+   -webkit-animation: git 1s ease;
 }
 
 
+@-moz-keyframes csharp {
+   0%   { width: 0px;  }
+   100% { width: 95%;  }
+}
+@-moz-keyframes database {
+   0%   { width: 0px;  }
+   100% { width: 90%;  }
+}
 @-moz-keyframes cpp {
   0%   { width: 0px;  }
   100% { width: 90%;  }
@@ -419,15 +479,15 @@ ul#nav li.current a { color: #124B63; }
 }
 @-moz-keyframes java {
   0%   { width: 0px;  }
-  100% { width: 60%;  }
+  100% { width: 65%;  }
 }
 @-moz-keyframes javascript {
   0%   { width: 0px;  }
-  100% { width: 55%;  }
+  100% { width: 80%;  }
 }
 @-moz-keyframes html {
   0%   { width: 0px;  }
-  100% { width: 68%;  }
+  100% { width: 90%;  }
 }
 @-moz-keyframes css {
   0%   { width: 0px;  }
@@ -435,26 +495,34 @@ ul#nav li.current a { color: #124B63; }
 }
 @-moz-keyframes django {
   0%   { width: 0px;  }
-  100% { width: 65%;  }
+  100% { width: 60%;  }
 }
 @-moz-keyframes android {
   0%   { width: 0px;  }
-  100% { width: 45%;  }
+  100% { width: 50%;  }
 }
 @-moz-keyframes nodejs {
   0%   { width: 0px;  }
-  100% { width: 25%;  }
+  100% { width: 30%;  }
 }
 @-moz-keyframes algorithms {
   0%   { width: 0px;  }
-  100% { width: 80%;  }
+  100% { width: 85%;  }
 }
-@-moz-keyframes datastuctures {
-  0%   { width: 0px;  }
-  100% { width: 75%;  }
+@-moz-keyframes git {
+   0%   { width: 0px;  }
+   100% { width: 85%;  }
 }
 
 
+@-webkit-keyframes csharp {
+   0%   { width: 0px;  }
+   100% { width: 95%;  }
+}
+@-webkit-keyframes database {
+0%   { width: 0px;  }
+100% { width: 90%;  }
+}
 @-webkit-keyframes cpp {
   0%   { width: 0px;  }
   100% { width: 90%;  }
@@ -465,15 +533,15 @@ ul#nav li.current a { color: #124B63; }
 }
 @-webkit-keyframes java {
   0%   { width: 0px;  }
-  100% { width: 60%;  }
+  100% { width: 65%;  }
 }
 @-webkit-keyframes javascript {
   0%   { width: 0px;  }
-  100% { width: 55%;  }
+  100% { width: 80%;  }
 }
 @-webkit-keyframes html {
   0%   { width: 0px;  }
-  100% { width: 68%;  }
+  100% { width: 90%;  }
 }
 @-webkit-keyframes css {
   0%   { width: 0px;  }
@@ -481,23 +549,23 @@ ul#nav li.current a { color: #124B63; }
 }
 @-webkit-keyframes django {
   0%   { width: 0px;  }
-  100% { width: 65%;  }
+  100% { width: 60%;  }
 }
 @-webkit-keyframes android {
   0%   { width: 0px;  }
-  100% { width: 45%;  }
+  100% { width: 50%;  }
 }
 @-webkit-keyframes nodejs {
   0%   { width: 0px;  }
-  100% { width: 25%;  }
+  100% { width: 30%;  }
 }
 @-webkit-keyframes algorithms {
   0%   { width: 0px;  }
-  100% { width: 80%;  }
+  100% { width: 85%;  }
 }
-@-webkit-keyframes datastuctures {
-  0%   { width: 0px;  }
-  100% { width: 75%;  }
+@-webkit-keyframes git {
+   0%   { width: 0px;  }
+   100% { width: 85%;  }
 }
 
 
@@ -505,24 +573,9 @@ ul#nav li.current a { color: #124B63; }
 /* e. projects Section
 /* ------------------------------------------------------------------ */
 
-#projects {
-   background: #fff;
-   opacity: 94%;
-   padding-top: 90px;
-   padding-bottom: 72px;
-   overflow: hidden;
-}
-
 /* ------------------------------------------------------------------ */
 /* f. experience Section
 /* ------------------------------------------------------------------ */
-
-#experience {
-   background: #ebeeee;
-   padding-top: 90px;
-   padding-bottom: 72px;
-   overflow: hidden;
-}
 
 #experience-wrapper .columns { margin-bottom: 36px; }
 .experience-item .item-wrap {
@@ -621,12 +674,6 @@ ul#nav li.current a { color: #124B63; }
 /* h. Contact Section
 /* ------------------------------------------------------------------ */
 
-#contact {
-   background: #124B63;
-   padding-top: 96px;
-   padding-bottom: 102px;
-   color: #636363;
-}
 #contact .section-head { margin-bottom: 42px; }
 
 #contact a, #contact a:visited  { color: #11ABB0; }
