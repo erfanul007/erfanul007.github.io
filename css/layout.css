@@ -295,6 +295,10 @@ ul#nav li.current a { color: #124B63; }
    text-transform: uppercase;
    letter-spacing: 1px;
 }
+#resume h5, #experience h5, #projects h5, #about h5, #skill h5, #contest h5{
+   font: 16px/20px 'opensans-bold', sans-serif;
+   letter-spacing: 1px;
+}
 #resume h1 span, #experience h1 span, #projects h1 span, #about h1 span, #skill h1 span, #contest h1 span{
    border-bottom: 3px solid #124B63;
    padding-bottom: 6px;
@@ -337,6 +341,15 @@ ul#nav li.current a { color: #124B63; }
   padding-left: 25px;
   padding-bottom: 20px;
   list-style-position: outside;
+}
+
+.subsection {
+   margin: 20px;
+   border-left: 2px solid #84B1C4;
+}
+
+.subsection:hover {
+   border-left: 2px solid #124B63;
 }
 
 /*----------------------------------------------*/
@@ -393,9 +406,13 @@ ul#nav li.current a { color: #124B63; }
 }
 
 
-
+.azure {
+   width: 65%;
+   -moz-animation: azure 1s ease;
+   -webkit-animation: azure 1s ease;
+}
 .csharp {
-   width: 95%;
+   width: 92%;
    -moz-animation: csharp 1s ease;
    -webkit-animation: csharp 1s ease;
 }
@@ -461,9 +478,13 @@ ul#nav li.current a { color: #124B63; }
 }
 
 
+@-moz-keyframes azure {
+   0%   { width: 0px;  }
+   100% { width: 65%;  }
+}
 @-moz-keyframes csharp {
    0%   { width: 0px;  }
-   100% { width: 95%;  }
+   100% { width: 92%;  }
 }
 @-moz-keyframes database {
    0%   { width: 0px;  }
@@ -515,9 +536,13 @@ ul#nav li.current a { color: #124B63; }
 }
 
 
+@-webkit-keyframes azure {
+   0%   { width: 0px;  }
+   100% { width: 65%;  }
+}
 @-webkit-keyframes csharp {
    0%   { width: 0px;  }
-   100% { width: 95%;  }
+   100% { width: 92%;  }
 }
 @-webkit-keyframes database {
 0%   { width: 0px;  }
@@ -711,6 +736,7 @@ ul#nav li.current a { color: #124B63; }
 #contact p.lead {
    font: 18px/36px 'opensans-light', sans-serif;
    padding-right: 3%;
+   padding-top: 20px;
 }
 #contact .header-col { padding-top: 6px; }
 
