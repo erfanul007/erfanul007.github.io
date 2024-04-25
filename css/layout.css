@@ -198,15 +198,7 @@ ul#nav li.current a { color: #124B63; }
 
 #experience {
    background: #fff;
-   opacity: 95%;
-   padding-top: 90px;
-   padding-bottom: 72px;
-   overflow: hidden;
-}
-
-#projects {
-   background: #fff;
-   opacity: 90%;
+   opacity: 100%;
    padding-top: 90px;
    padding-bottom: 72px;
    overflow: hidden;
@@ -220,9 +212,17 @@ ul#nav li.current a { color: #124B63; }
    overflow: hidden;
 }
 
+#projects {
+   background: #fff;
+   opacity: 100%;
+   padding-top: 90px;
+   padding-bottom: 72px;
+   overflow: hidden;
+}
+
 #contest {
    background: #fff;
-   opacity: 90%;
+   opacity: 95%;
    padding-top: 90px;
    padding-bottom: 90px;
    overflow: hidden;
@@ -230,7 +230,7 @@ ul#nav li.current a { color: #124B63; }
 
 #resume{
    background: #fff;
-   opacity: 95%;
+   opacity: 100%;
    padding-top: 90px;
    padding-bottom: 90px;
    overflow: hidden;
@@ -265,7 +265,6 @@ ul#nav li.current a { color: #124B63; }
   width: 41.66667%;
 }
 #about .download {
-   width: 30%;
    padding-top: 6px;
 }
 #about .main-col { padding-right: 5%; }
@@ -359,6 +358,11 @@ ul#nav li.current a { color: #124B63; }
 .expert{
    border-bottom: 0px !important;
    color: #0000FF !important;
+}
+
+.champion{
+   border-bottom: 0px !important;
+   color: green !important;
 }
 
 .bars {
@@ -921,3 +925,31 @@ footer .social-links li:first-child { margin-left: 0; }
  	border-radius: 100%;
 }
 #go-top a:hover { background-color: #0F9095; }
+
+.display-none{
+   display: none;
+}
+
+.skill-tag{
+   margin-bottom: 20px;
+}
+
+.skill-tag span{
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-right: 5px;
+   margin-bottom: 10px;
+   display: inline-block;
+}
+
+.skill-tag span:hover{
+   border-color: #aaa;
+   cursor: pointer;
+}
+
+.position-desc{
+   margin-bottom: 0px;
+   line-height: 150%;
+}
