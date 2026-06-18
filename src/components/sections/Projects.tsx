@@ -66,6 +66,7 @@ const Projects = () => {
                 <img
                   src={`${baseUrl}${project.image}`}
                   alt={`${project.title} logo`}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     // Fallback if image fails to load
@@ -98,11 +99,11 @@ const Projects = () => {
 
                 {/* Description with truncation and hover effect */}
                 <div className="relative mb-4">
-                  <p className="text-gray-700 dark:text-gray-300 line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
+                  <p className="text-gray-700 dark:text-gray-300 line-clamp-none md:line-clamp-2 md:group-hover:line-clamp-none transition-all duration-300">
                     {project.description}
                   </p>
                   {project.description.length > 100 && (
-                    <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-gray-50 dark:from-gray-800 to-transparent group-hover:opacity-0 transition-opacity duration-300"></div>
+                    <div className="hidden md:block absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-gray-50 dark:from-gray-800 to-transparent md:group-hover:opacity-0 transition-opacity duration-300"></div>
                   )}
                 </div>
 
@@ -118,14 +119,14 @@ const Projects = () => {
                       </span>
                     ))}
                     {project.technologies.length > 3 && (
-                      <span className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs rounded-full group-hover:hidden">
+                      <span className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs rounded-full hidden md:inline-block md:group-hover:hidden">
                         +{project.technologies.length - 3} more
                       </span>
                     )}
                   </div>
 
                   {/* Additional technologies that show on project hover */}
-                  <div className="flex flex-wrap gap-2 mt-2 h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-300 overflow-hidden">
+                  <div className="flex flex-wrap gap-2 mt-2 h-auto opacity-100 md:h-0 md:opacity-0 md:group-hover:h-auto md:group-hover:opacity-100 transition-all duration-300 overflow-hidden">
                     {project.technologies.slice(3).map((tech, index) => (
                       <span
                         key={index}

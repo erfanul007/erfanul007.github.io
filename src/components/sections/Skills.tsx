@@ -5,6 +5,7 @@ const skillCategories = [
   {
     id: 1,
     name: 'Programming Languages',
+    short: 'Languages',
     icon: (
       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -22,6 +23,7 @@ const skillCategories = [
   {
     id: 2,
     name: 'Backend',
+    short: 'Backend',
     icon: (
       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <path fillRule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
@@ -29,33 +31,36 @@ const skillCategories = [
     ),
     skills: [
       { name: '.NET', level: 95 },
-      { name: 'EF Core', level: 90 },
       { name: 'FastAPI', level: 85 },
-      { name: 'CQRS', level: 80 },
-      { name: 'Node.js', level: 70 },
-      { name: 'RabbitMQ', level: 75 }
+      { name: 'Clean Architecture', level: 80 },
+      { name: 'RabbitMQ', level: 75 },
+      { name: 'DDD', level: 75 },
+      { name: 'Node.js', level: 70 }
     ]
   },
   {
     id: 3,
     name: 'AI & LLM',
+    short: 'AI',
     icon: (
       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" />
+        <path fillRule="evenodd" d="M13 7H7v6h6V7z" clipRule="evenodd" />
+        <path fillRule="evenodd" d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z" clipRule="evenodd" />
       </svg>
     ),
     skills: [
-      { name: 'Agent Building', level: 90 },
-      { name: 'GraphBit', level: 85 },
-      { name: 'LLM', level: 85 },
-      { name: 'CrewAI', level: 80 },
-      { name: 'Vector DB', level: 80 },
-      { name: 'MCP', level: 70 }
+      { name: 'Agent Workflows', level: 90 },
+      { name: 'RAG', level: 85 },
+      { name: 'Local LLMs', level: 85 },
+      { name: 'GraphRAG', level: 80 },
+      { name: 'Vector Search', level: 80 },
+      { name: 'Microsoft.Extensions.AI', level: 70 }
     ]
   },
   {
     id: 4,
     name: 'Database & Cloud',
+    short: 'Cloud',
     icon: (
       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z" />
@@ -64,17 +69,18 @@ const skillCategories = [
       </svg>
     ),
     skills: [
+      { name: 'EF Core', level: 90 },
       { name: 'Azure', level: 85 },
       { name: 'AWS', level: 85 },
       { name: 'SQL Server', level: 85 },
       { name: 'PostgreSQL', level: 80 },
-      { name: 'Redis', level: 75 },
-      { name: 'Snowflake', level: 70 }
+      { name: 'Qdrant', level: 75 }
     ]
   },
   {
     id: 5,
     name: 'Frontend & Tools',
+    short: 'Tools',
     icon: (
       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <path fillRule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clipRule="evenodd" />
@@ -148,14 +154,15 @@ const Skills = () => {
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center justify-center p-3 mx-1 rounded-md text-sm font-medium transition-colors ${activeCategory === category.id
+                  className={`flex items-center gap-2 px-3 py-2 mx-1 my-1 rounded-md text-sm font-medium whitespace-nowrap transition-colors ${activeCategory === category.id
                     ? 'bg-white dark:bg-gray-700 text-blue-600 dark:text-blue-400 shadow-sm'
                     : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
                     }`}
                   aria-label={category.name}
                   title={category.name}
                 >
-                  <span>{category.icon}</span>
+                  <span className="flex-shrink-0">{category.icon}</span>
+                  <span>{category.short}</span>
                 </button>
               ))}
             </div>

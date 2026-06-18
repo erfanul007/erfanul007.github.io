@@ -16,17 +16,19 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 shadow-md">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo/Name */}
-        <a 
-          onClick={() => handleNavClick('home')} 
+        <button
+          type="button"
+          onClick={() => handleNavClick('home')}
           className="text-2xl font-bold text-blue-600 dark:text-blue-400 cursor-pointer"
         >
           Md Erfanul
-        </a>
+        </button>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           {sections.map((section) => (
-            <a
+            <button
+              type="button"
               key={section.id}
               onClick={() => handleNavClick(section.id)}
               className={`cursor-pointer transition-colors text-base ${
@@ -36,7 +38,7 @@ const Header = () => {
               }`}
             >
               {section.name}
-            </a>
+            </button>
           ))}
         </nav>
 
@@ -80,17 +82,18 @@ const Header = () => {
         <nav className="md:hidden bg-white dark:bg-gray-800 py-4 px-6 shadow-lg">
           <div className="flex flex-col space-y-4">
             {sections.map((section) => (
-              <a
+              <button
+                type="button"
                 key={section.id}
                 onClick={() => handleNavClick(section.id)}
-                className={`cursor-pointer text-base ${
+                className={`cursor-pointer text-base text-left ${
                   currentSection === section.id
                     ? 'text-blue-600 dark:text-blue-400 font-medium'
                     : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
                 }`}
               >
                 {section.name}
-              </a>
+              </button>
             ))}
           </div>
         </nav>
