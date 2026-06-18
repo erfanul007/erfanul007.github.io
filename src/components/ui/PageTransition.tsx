@@ -12,8 +12,9 @@ const PageTransition = ({ children }: PageTransitionProps) => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   
   useEffect(() => {
-    // Only trigger transition if the path changes
     if (location.pathname !== displayLocation.pathname) {
+      // Drives a timed fade sequence, not derivable render state.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsTransitioning(true);
       setTransitionStage('fadeOut');
     }
@@ -21,17 +22,15 @@ const PageTransition = ({ children }: PageTransitionProps) => {
   
   useEffect(() => {
     if (transitionStage === 'fadeOut') {
-      // Wait for the fade out to complete before changing content
       const timeout = setTimeout(() => {
         setDisplayLocation(location);
         setTransitionStage('fadeIn');
-      }, 300); // Match this with the CSS transition duration
-      
+      }, 300); // match the CSS transition duration
+
       return () => clearTimeout(timeout);
     }
-    
+
     if (transitionStage === 'fadeIn') {
-      // Reset the transitioning state after fade in completes
       const timeout = setTimeout(() => {
         setIsTransitioning(false);
       }, 300);

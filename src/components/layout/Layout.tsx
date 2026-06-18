@@ -16,16 +16,15 @@ const Layout = ({ children }: LayoutProps) => {
   const location = useLocation();
   const [isTransitioning, setIsTransitioning] = useState(false);
   
-  // Track page transitions
   useEffect(() => {
-    // Set transitioning state when location changes
+    // Drives a timed transition class, not derivable render state.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsTransitioning(true);
-    
-    // Reset transitioning state after animation completes
+
     const timeout = setTimeout(() => {
       setIsTransitioning(false);
-    }, 600); // Slightly longer than the transition duration to ensure completion
-    
+    }, 600); // longer than the CSS transition so it finishes first
+
     return () => clearTimeout(timeout);
   }, [location.pathname]);
   
