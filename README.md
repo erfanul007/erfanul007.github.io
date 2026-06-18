@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my skills, projects, education
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://erfanul007.github.io/portfolio-ai/)
+[View Live Demo](https://erfanul007.github.io/)
 
 ## ✨ Features
 
@@ -47,15 +47,15 @@ portfolio-ai/
 
 ### Prerequisites
 
-- Node.js (v14.0.0 or later)
+- Node.js (v20.19+ or v22.12+, required by Vite 8)
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/erfanul007/portfolio-ai.git
-   cd portfolio-ai
+   git clone https://github.com/erfanul007/erfanul007.github.io.git
+   cd erfanul007.github.io
    ```
 
 2. Install dependencies
@@ -86,16 +86,12 @@ This entire portfolio website was built using **Cursor AI**, powered by Claude 3
 
 The AI was able to understand requirements, suggest implementations, and make adjustments based on feedback, demonstrating the power of AI-assisted development for creating professional web applications.
 
-## 📝 License
-
-This project is available under the [MIT License](LICENSE).
-
 ## 📞 Contact
 
-- **Email**: erfanul.islam@gmail.com
+- **Email**: eib.erfan@gmail.com
 - **LinkedIn**: [linkedin.com/in/erfanul007](https://linkedin.com/in/erfanul007)
 - **GitHub**: [github.com/erfanul007](https://github.com/erfanul007)
 
 ---
 
-© 2025 Md Erfanul Islam Bhuiyan. This project is available under the [MIT License](LICENSE).
+© 2025 Md Erfanul Islam Bhuiyan. All rights reserved.
