@@ -1,7 +1,7 @@
-import { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
+import { createContext, useContext, ReactNode, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-// Define the sections in order
+// Order here sets the navigation order across all nav widgets.
 export const sections = [
   { id: 'home', name: 'Home', path: '/' },
   { id: 'experience', name: 'Experience', path: '/experience' },
@@ -24,34 +24,24 @@ const NavigationContext = createContext<NavigationContextType | undefined>(undef
 export const NavigationProvider = ({ children }: { children: ReactNode }) => {
   const navigate = useNavigate();
   const location = useLocation();
-  
-  // Determine current section based on location
+
   const getCurrentSectionFromPath = useCallback(() => {
     const path = location.pathname;
     const currentSection = sections.find(section => section.path === path);
     return currentSection?.id || 'home';
   }, [location.pathname]);
   
-  const [currentSection, setCurrentSection] = useState<string>(getCurrentSectionFromPath());
-  
-  // Update current section when location changes
-  useEffect(() => {
-    setCurrentSection(getCurrentSectionFromPath());
-  }, [location.pathname, getCurrentSectionFromPath]);
-  
-  // Navigate to a specific section
+  // Derived from the route during render — no effect/state needed.
+  const currentSection = getCurrentSectionFromPath();
+
   const navigateToSection = useCallback((sectionId: string) => {
     const section = sections.find(s => s.id === sectionId);
     if (section) {
       navigate(section.path);
-      setCurrentSection(sectionId);
-      
-      // Scroll to top when changing sections
       window.scrollTo(0, 0);
     }
   }, [navigate]);
-  
-  // Navigate to the next section
+
   const navigateToNextSection = useCallback(() => {
     const currentIndex = sections.findIndex(s => s.id === currentSection);
     if (currentIndex < sections.length - 1) {
@@ -59,8 +49,7 @@ export const NavigationProvider = ({ children }: { children: ReactNode }) => {
       navigateToSection(nextSection.id);
     }
   }, [currentSection, navigateToSection]);
-  
-  // Navigate to the previous section
+
   const navigateToPrevSection = useCallback(() => {
     const currentIndex = sections.findIndex(s => s.id === currentSection);
     if (currentIndex > 0) {

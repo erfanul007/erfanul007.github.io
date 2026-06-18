@@ -4,22 +4,31 @@ import { useState, useEffect } from 'react';
 // Get the base URL from Vite
 const baseUrl = import.meta.env.BASE_URL;
 
+const titles = [
+  'Senior Software Engineer',
+  '.NET Developer',
+  'Competitive Programmer',
+  'Senior Backend Developer',
+  'AI Solution Expert'
+];
+
+// Skip the typewriter animation for users who prefer reduced motion.
+const prefersReducedMotion = () =>
+  typeof window !== 'undefined' &&
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 const Hero = () => {
   const { navigateToSection } = useNavigation();
-  const [displayText, setDisplayText] = useState('');
+  const [displayText, setDisplayText] = useState(() =>
+    prefersReducedMotion() ? titles[0] : ''
+  );
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const titles = [
-    'Senior Software Engineer',
-    '.NET Developer',
-    'Competitive Programmer',
-    'Senior Backend Developer',
-    'AI Solution Expert'
-  ];
-
   useEffect(() => {
+    if (prefersReducedMotion()) return;
+
     const handleTyping = () => {
       const currentIndex = loopNum % titles.length;
       const fullText = titles[currentIndex];
@@ -51,7 +60,7 @@ const Hero = () => {
 
     const timer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(timer);
-  }, [displayText, isDeleting, loopNum, typingSpeed, titles]);
+  }, [displayText, isDeleting, loopNum, typingSpeed]);
 
   return (
     <section id="home" className="py-20 md:py-32">
@@ -66,7 +75,7 @@ const Hero = () => {
               <span className="cursor-blink">|</span>
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-lg">
-              Software Engineer with 4 years of experience building enterprise solutions. Strong competitive programming background in algorithms and data structures, applied to designing and optimizing high-performance distributed systems and AI-powered applications.
+              Backend and AI-focused Software Engineer with 4+ years building enterprise platforms, AI workflows, and distributed systems. I turn complex business requirements into reliable services across .NET, Python, RAG, and event-driven architectures.
             </p>
             <div className="flex flex-wrap gap-4">
               <button
@@ -76,7 +85,7 @@ const Hero = () => {
                 Contact Me
               </button>
               <a
-                href="https://app.flowcv.com/api/public/download_resume?token=jpiu4g5d0v"
+                href="https://app.flowcv.com/api/public/download_resume?token=3o90gnnmlts0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-md hover:bg-blue-600 hover:text-white dark:hover:text-white transition-colors flex items-center gap-2"

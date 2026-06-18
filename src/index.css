@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* class-based dark mode (Tailwind v4) */
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   body {
@@ -14,8 +15,6 @@
   /* Main content scrollable area */
   main {
     overflow-y: auto;
-    /* Use overlay to prevent layout shifts */
-    overflow-y: overlay;
     /* Ensure the main content is scrollable */
     height: 100%;
     position: relative;
@@ -91,5 +90,22 @@
   /* Prevent content flash during page transitions */
   .page-transitioning * {
     transition: none !important;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
