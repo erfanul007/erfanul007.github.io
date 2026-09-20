@@ -7,7 +7,7 @@ const educations = [
     institutionUrl: 'https://daffodilvarsity.edu.bd/',
     location: 'Dhaka, Bangladesh',
     period: 'January 2018 - January 2022',
-    description: 'Graduated with a good GPA of 3.73/4.00 while being active in the university\'s tech community. Balanced studies with involvement in programming competitions and the programming club.',
+    description: 'Graduated with a good CGPA of 3.73/4.00 (93%) while being active in the university\'s tech community. Balanced studies with involvement in programming competitions and the programming club.',
     courses: ['Data Structure', 'Algorithm', 'OOP', 'Database', 'Web Development', 'Operating System', 'Artificial Intelligence']
   }
 ];

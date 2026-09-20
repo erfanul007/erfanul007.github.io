@@ -75,7 +75,7 @@ const Hero = () => {
               <span className="cursor-blink">|</span>
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-lg">
-              Backend and AI-focused Software Engineer with 4+ years building enterprise platforms, AI workflows, and distributed systems. I turn complex business requirements into reliable services across .NET, Python, RAG, and event-driven architectures.
+              Backend and AI-focused Software Engineer with 4.5+ years building enterprise SaaS platforms, scalable AI-powered workflows, and event-driven distributed systems. I turn complex business requirements into reliable services across .NET, Python, and RAG, and specialize in the AI-driven software development lifecycle to speed up delivery.
             </p>
             <div className="flex flex-wrap gap-4">
               <button
@@ -85,7 +85,7 @@ const Hero = () => {
                 Contact Me
               </button>
               <a
-                href="https://app.flowcv.com/api/public/download_resume?token=3o90gnnmlts0"
+                href="https://app.flowcv.com/api/public/download_resume?token=f7g2kq4ieaub"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-md hover:bg-blue-600 hover:text-white dark:hover:text-white transition-colors flex items-center gap-2"
