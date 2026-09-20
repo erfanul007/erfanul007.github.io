@@ -36,7 +36,8 @@ const skillCategories = [
       { name: 'RabbitMQ', level: 75 },
       { name: 'DDD', level: 75 },
       { name: 'Node.js', level: 70 }
-    ]
+    ],
+    also: ['xUnit']
   },
   {
     id: 3,
@@ -55,7 +56,8 @@ const skillCategories = [
       { name: 'GraphRAG', level: 80 },
       { name: 'Vector Search', level: 80 },
       { name: 'Microsoft.Extensions.AI', level: 70 }
-    ]
+    ],
+    also: ['Orca ADE', 'Claude Code', 'Embeddings']
   },
   {
     id: 4,
@@ -75,7 +77,8 @@ const skillCategories = [
       { name: 'SQL Server', level: 85 },
       { name: 'PostgreSQL', level: 80 },
       { name: 'Qdrant', level: 75 }
-    ]
+    ],
+    also: ['MS Graph', 'SharePoint', 'Snowflake', 'Adobe eSign', 'Microsoft Foundry']
   },
   {
     id: 5,
@@ -93,7 +96,8 @@ const skillCategories = [
       { name: 'React', level: 75 },
       { name: 'Linux', level: 75 },
       { name: 'Angular', level: 70 }
-    ]
+    ],
+    also: ['Redis', 'CI/CD']
   }
 ];
 
@@ -209,6 +213,20 @@ const Skills = () => {
                     </div>
                   ))}
                 </div>
+
+                {activeCategoryData.also && (
+                  <div className="mt-6 flex flex-wrap items-center gap-2">
+                    <span className="text-sm font-semibold text-gray-900 dark:text-white">Also:</span>
+                    {activeCategoryData.also.map((name) => (
+                      <span
+                        key={name}
+                        className="px-3 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-300 text-sm rounded-full"
+                      >
+                        {name}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
           </div>
