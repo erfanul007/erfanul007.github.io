@@ -107,8 +107,8 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Phone</h4>
-                  <a href="tel:+8801521234156" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
-                    +880 1521 234156
+                  <a href="tel:+4916092239269" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                    +49 160 92239269
                   </a>
                 </div>
               </div>
@@ -123,7 +123,7 @@ const Contact = () => {
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Location</h4>
                   <p className="text-gray-700 dark:text-gray-300">
-                    Dhaka, Bangladesh
+                    Berlin, Germany
                   </p>
                 </div>
               </div>

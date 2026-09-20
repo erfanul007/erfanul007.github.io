@@ -1,21 +1,40 @@
-// Experience data grouped by company; roles ordered most-recent first
+// Experience data grouped by company stint; roles ordered most-recent first
 const experiences = [
   {
-    id: 'netpower',
-    company: 'Netpower',
+    id: 'infinitibit-current',
+    company: 'InfinitiBit',
+    companyUrl: 'https://www.infinitibit.com/',
+    location: 'Dhaka, Bangladesh',
+    period: 'August 2026 - Present',
+    roles: [
+      {
+        title: 'Senior Backend Developer',
+        period: 'August 2026 - Present',
+        description: [
+          'Integrated an app into a multi-tenant, multi-app B2B SaaS platform, maintaining enterprise security compliance while validating VAT transactions under EU and German regulations.',
+          'Led the design and development of a tax automation system with the GraphBit AI agent framework, enabling auditable analysis of sensitive data while maintaining security and efficiency.'
+        ],
+        technologies: ['GraphBit', 'AI Agents', 'Multi-tenant SaaS', 'VAT Compliance']
+      }
+    ]
+  },
+  {
+    id: 'sds-manager',
+    company: 'SDS Manager (Netpower)',
     companyUrl: 'https://www.netpower.no/',
     location: 'Dhaka, Bangladesh',
-    period: 'April 2026 - Present',
+    period: 'April 2026 - July 2026',
     roles: [
       {
         title: 'Senior Software Engineer (Backend)',
-        period: 'April 2026 - Present',
+        period: 'April 2026 - July 2026',
         description: [
           'Engineered a .NET 10 document intelligence system for HTML documents with smart chunking, plus sparse vector and dense embeddings using Microsoft.Extensions.AI.',
           'Built a private .NET NuGet package for distributed systems, enabling cross-service communication through RabbitMQ event-driven workflows such as notifications and email sending.',
-          'Led the engineering of a common background job management system handling recurring and scheduled events with Quartz for a distributed quality management system.'
+          'Led the engineering of a common background job management system handling recurring and scheduled events with Quartz for the distributed quality management system Certain QMS.',
+          'Crafted an email template management system with a branding shell and multi-cultural support, allowing admins to modify system notification email contents and placeholders.'
         ],
-        technologies: ['.NET 10', 'Microsoft.Extensions.AI', 'RabbitMQ', 'Quartz.NET', 'Embeddings', 'Distributed Systems']
+        technologies: ['.NET 10', 'Microsoft.Extensions.AI', 'RabbitMQ', 'Quartz.NET', 'Embeddings', 'Email Templates', 'Distributed Systems']
       }
     ]
   },
@@ -30,19 +49,18 @@ const experiences = [
         title: 'Senior Backend Developer',
         period: 'November 2025 - March 2026',
         description: [
-          'Led the design of a tax automation system using GraphBit AI agent framework, ensuring security and efficiency for sensitive data analysis.',
-          'Led backend development for a Python multi-agent chat system with GraphRAG and Local LLM, optimizing for unstructured data and privacy.',
-          'Built a pipeline converting 3TB of documents to metadata-rich text, boosting vectorization and model training efficiency by 10x.'
+          'Led backend development for a Python multi-agent chat system with GraphRAG and Local LLM in a clustered GPU system, enabling better querying over huge unstructured data while maximizing data privacy.',
+          'Built a data processing pipeline CLI tool converting 3TB of documents to metadata-rich text, boosting vectorization and model training efficiency by 10x.'
         ],
-        technologies: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'CrewAI', 'GraphBit', 'Local LLM', 'Docker']
+        technologies: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'CrewAI', 'GraphRAG', 'Local LLM', 'Docker']
       },
       {
         title: 'Backend Developer (.NET)',
         period: 'November 2024 - November 2025',
         description: [
-          'Developed a .NET 8 bid management platform for a top German energy company with RAG-based AI agents, achieving a 40% efficiency boost in document analysis.',
-          'Architected services for long-running AI analysis, versioning, and e-signatures, significantly improving process workflows.',
-          'Integrated Snowflake, Adobe e-Sign, SharePoint, and AWS services (S3, SES) to automate complex enterprise data workflows.',
+          'Developed a .NET 8 bid management platform for a top German energy company with RAG-based AI agent workflows, achieving a 40% efficiency boost in document analysis.',
+          'Designed microservices for long-running AI analysis, document versioning, and signature workflow management, significantly improving process workflows.',
+          'Integrated Snowflake, Adobe e-Sign, SharePoint, SAP, and AWS services (S3, SES) to automate complex enterprise data workflows.',
           'Designed an event-driven platform processing 100M+ events/day using Go, Kafka, TimescaleDB, and Kubernetes.'
         ],
         technologies: ['.NET 8', 'EF Core', 'SQL Server', 'CQRS', 'RabbitMQ', 'RAG', 'AWS']
@@ -60,7 +78,7 @@ const experiences = [
         title: 'Senior Software Engineer',
         period: 'April 2024 - July 2024',
         description: [
-          'Migrated a hiring platform from Node.js to .NET 8, establishing a modular architecture for enhanced scalability.',
+          'Migrated a hiring platform from Node.js to .NET 8, establishing a modular architecture for enhanced scalability and extensibility.',
           'Managed development of substantial features for a leading Angular-based project management software.'
         ],
         technologies: ['.NET 8', 'C#', 'Angular', 'Modular Monolith', 'Node.js']
@@ -69,10 +87,10 @@ const experiences = [
         title: 'Software Engineer',
         period: 'January 2022 - March 2024',
         description: [
-          'Migrated a US-based dental practice management system, upgrading applications from VB.NET 3.5 to C# .NET 6 to integrate cloud-native Azure services.',
-          'Built a microservice with Azure Functions for sending transactional emails on behalf of client emails with customized templates.',
-          'Developed SSO with Azure Active Directory (Microsoft Entra) for multi-tenant SaaS platform with 100k+ users.',
-          'Identified security vulnerabilities and implemented a backend RBAC authorization layer in API endpoints to prevent data breaches.'
+          'Migrated the US-based dental practice management system Denticon, upgrading applications from VB.NET 3.5 to C# .NET 6 to integrate cloud-native Azure services.',
+          'Built a serverless microservice with Azure Functions for sending transactional emails on behalf of clients, using their email and customized templates.',
+          'Developed SSO with Microsoft Entra (Azure Active Directory) for a multi-tenant B2B SaaS platform with 100k+ users.',
+          'Identified authorization gaps and implemented a backend RBAC authorization layer across API endpoints to reduce unauthorized data-access risk.'
         ],
         technologies: ['.NET 6', 'C#', 'Azure Functions', 'Microsoft Entra', 'Microservices', 'VB.NET']
       }
