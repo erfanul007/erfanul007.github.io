@@ -32,15 +32,15 @@ const experiences: CompanyStint[] = [
         title: 'Senior Backend Developer',
         period: 'August 2026 - Present',
         highlights: [
-          'Architected the backend of an AI VAT validation product that checks invoices against German and EU tax law and cites the exact law behind every verdict.',
+          'Architected the backend of an AI VAT validation product that checks invoices against German and EU tax law and cites the exact legal provision behind every verdict.',
           'Evolved the proof of concept into a multi-tenant SaaS MVP, adding single sign-on, role-based access, per-customer storage, credit billing and audit logs.',
           'Isolated each customer in its own PostgreSQL schema and database role, enforced on every query, to prevent cross-customer data access.',
-          "Designed the shared RabbitMQ event contract every product on the company's SaaS platform integrates through, and led the adoption of Temporal for long-running workflows.",
-          'Built crash-safe background processing with Temporal and a transactional outbox, designed for 10,000 validations from one click and resuming after a restart.'
+          "Designed a shared RabbitMQ event contract for the products on the company's SaaS platform, and led the adoption of Temporal for long-running workflows.",
+          'Built fault-tolerant background processing with Temporal and a transactional outbox, designed to run 10,000 validations from one click and recover after restarts.'
         ],
         more: [
           'Built tooling to create, monitor and sync the tax-law knowledge graph for each customer, with human approval before any law change goes live.',
-          'Implemented observability with OpenTelemetry, Grafana, Tempo, Loki and Prometheus, tracing any failure across the API, workers and LLM calls in one place.',
+          'Implemented observability with OpenTelemetry, Grafana, Tempo, Loki and Prometheus, so failures across the API, workers and LLM calls can be traced in one place.',
           'Introduced an AI-driven delivery workflow with Claude Code, reviewed 35+ pull requests and mentored two junior developers.'
         ],
         technologies: ['Python', 'FastAPI', 'PostgreSQL', 'Temporal', 'RabbitMQ', 'OpenTelemetry', 'Grafana', 'Knowledge Graph', 'AI Agents', 'Multi-tenant SaaS']
@@ -59,8 +59,8 @@ const experiences: CompanyStint[] = [
         period: 'April 2026 - July 2026',
         summary: 'Norway-based quality management system focused on workplace quality, safety and regulations.',
         highlights: [
-          'Built a .NET 10 document intelligence service with smart chunking and sparse and dense embeddings using Microsoft.Extensions.AI.',
-          'Led a shared background job system for all Certain QMS microservices, with a custom RRULE scheduler on iCal.NET, Quartz.NET running due work, and OpenTelemetry tracing.',
+          'Built a .NET 10 document intelligence service with smart chunking, sparse vectors and dense embeddings using Microsoft.Extensions.AI.',
+          'Led development of a shared background job system for Certain QMS microservices, building a custom RRULE scheduler with iCal.NET, Quartz.NET for execution, and OpenTelemetry for tracing.',
           'Created a private NuGet messaging package so services exchange events over RabbitMQ for workflows like notifications and email.',
           'Built an email template manager with branding, multi-language support and placeholders, letting admins edit notification emails themselves.'
         ],
@@ -82,7 +82,7 @@ const experiences: CompanyStint[] = [
         title: 'Senior Backend Developer',
         period: 'November 2025 - March 2026',
         highlights: [
-          'Led backend development of a private GraphRAG chat system on a local GPU cluster, cutting response time from 10–12 minutes to under 2 minutes with a fully async agent pipeline.',
+          'Led backend development of a private GraphRAG chat system on a local GPU cluster, cutting response time from 10–12 minutes to under 2 minutes with an asynchronous agent pipeline.',
           'Designed the backend architecture of GT Tax, a transfer-pricing tax platform, and built its single sign-on, role-based access, document storage and working-paper ingestion.',
           'Built a document ingestion tool that converted 3TB of PDFs, Office files and images into text with metadata for the knowledge graph and model training.'
         ],
@@ -122,7 +122,7 @@ const experiences: CompanyStint[] = [
         period: 'April 2024 - July 2024',
         highlights: [
           'Migrated a hiring platform from Node.js to .NET 8, restructuring it as a modular monolith that is easier to scale and extend.',
-          'Delivered major UI features, including task management, for a leading Angular-based project management product.',
+          'Delivered task management and other major UI features for a leading Angular-based project management product.',
           'Reviewed pull requests and mentored teammates.'
         ],
         technologies: ['.NET 8', 'C#', 'Angular', 'TypeScript', 'Modular Monolith', 'Node.js']
@@ -133,7 +133,7 @@ const experiences: CompanyStint[] = [
         highlights: [
           'Migrated the US dental practice system Denticon from VB.NET 3.5 to C# .NET 6, preparing it for Azure cloud services.',
           'Implemented Microsoft Entra single sign-on (OAuth2/OIDC) for a multi-tenant B2B SaaS platform with 100k+ users.',
-          'Fixed high-priority production issues, including unauthorised data access, with a central policy-based (PBAC) authorization layer across APIs.'
+          'Fixed high-priority production issues, including unauthorised data access, by building a central policy-based access control (PBAC) layer across APIs.'
         ],
         more: [
           'Introduced onion architecture to split services into clean, modular layers.',
