@@ -32,15 +32,15 @@ const experiences: CompanyStint[] = [
         title: 'Senior Backend Developer',
         period: 'August 2026 - Present',
         highlights: [
-          'Led the backend architecture of an AI VAT validation product that checks invoices against German and EU tax law, citing the exact law behind every verdict.',
-          'Turned the demo into a multi-tenant SaaS MVP, adding single sign-on, role-based access, per-customer storage, credit billing and audit logs.',
-          'Isolated each customer in its own PostgreSQL schema and role, enforced on every query, so tax data never leaks between customers.',
-          "Designed the shared RabbitMQ event contract for the company's SaaS platform and led the adoption of Temporal, so every product app integrates the same way.",
+          'Architected the backend of an AI VAT validation product that checks invoices against German and EU tax law and cites the exact law behind every verdict.',
+          'Evolved the proof of concept into a multi-tenant SaaS MVP, adding single sign-on, role-based access, per-customer storage, credit billing and audit logs.',
+          'Isolated each customer in its own PostgreSQL schema and database role, enforced on every query, to prevent cross-customer data access.',
+          "Designed the shared RabbitMQ event contract every product on the company's SaaS platform integrates through, and led the adoption of Temporal for long-running workflows.",
           'Built crash-safe background processing with Temporal and a transactional outbox, designed for 10,000 validations from one click and resuming after a restart.'
         ],
         more: [
-          'Built tools to build, monitor and sync the tax-law knowledge graph for each customer, with human approval before any law change goes live.',
-          'Set up observability with OpenTelemetry, Grafana, Tempo, Loki and Prometheus, so any failure across the API, workers and LLM calls is traced in one place.',
+          'Built tooling to create, monitor and sync the tax-law knowledge graph for each customer, with human approval before any law change goes live.',
+          'Implemented observability with OpenTelemetry, Grafana, Tempo, Loki and Prometheus, tracing any failure across the API, workers and LLM calls in one place.',
           'Introduced an AI-driven delivery workflow with Claude Code, reviewed 35+ pull requests and mentored two junior developers.'
         ],
         technologies: ['Python', 'FastAPI', 'PostgreSQL', 'Temporal', 'RabbitMQ', 'OpenTelemetry', 'Grafana', 'Knowledge Graph', 'AI Agents', 'Multi-tenant SaaS']
@@ -60,11 +60,14 @@ const experiences: CompanyStint[] = [
         summary: 'Norway-based quality management system focused on workplace quality, safety and regulations.',
         highlights: [
           'Built a .NET 10 document intelligence service with smart chunking and sparse and dense embeddings using Microsoft.Extensions.AI.',
-          'Led a shared background job system on Quartz.NET that runs recurring and scheduled work for all Certain QMS microservices.',
+          'Led a shared background job system for all Certain QMS microservices, with a custom RRULE scheduler on iCal.NET, Quartz.NET running due work, and OpenTelemetry tracing.',
           'Created a private NuGet messaging package so services exchange events over RabbitMQ for workflows like notifications and email.',
-          'Built an email template manager with branding and multi-language support, letting admins edit notification emails themselves.'
+          'Built an email template manager with branding, multi-language support and placeholders, letting admins edit notification emails themselves.'
         ],
-        technologies: ['.NET 10', 'Microsoft.Extensions.AI', 'Embeddings', 'RabbitMQ', 'Quartz.NET', 'NuGet', 'Microservices']
+        more: [
+          'Built GitLab CI/CD pipelines for multiple service repositories.'
+        ],
+        technologies: ['.NET 10', 'Microsoft.Extensions.AI', 'Embeddings', 'RabbitMQ', 'Quartz.NET', 'iCal.NET', 'OpenTelemetry', 'GitLab CI/CD', 'NuGet', 'Microservices']
       }
     ]
   },
@@ -79,7 +82,7 @@ const experiences: CompanyStint[] = [
         title: 'Senior Backend Developer',
         period: 'November 2025 - March 2026',
         highlights: [
-          'Led the backend of a private GraphRAG chat system on a local GPU cluster, cutting response time from 10–12 minutes to under 2 with a fully async agent pipeline.',
+          'Led backend development of a private GraphRAG chat system on a local GPU cluster, cutting response time from 10–12 minutes to under 2 minutes with a fully async agent pipeline.',
           'Designed the backend architecture of GT Tax, a transfer-pricing tax platform, and built its single sign-on, role-based access, document storage and working-paper ingestion.',
           'Built a document ingestion tool that converted 3TB of PDFs, Office files and images into text with metadata for the knowledge graph and model training.'
         ],
@@ -101,7 +104,7 @@ const experiences: CompanyStint[] = [
         more: [
           'Connected modules with event-driven messaging on MassTransit and RabbitMQ, and integrated SharePoint, AWS S3, SES and CloudWatch.',
           'Added exchange-rate management so commercial offers convert currency per work package.',
-          'Designed the architecture and AWS cost model for a real-time power-utility data platform handling about 7,500 sensor messages per second.'
+          'Designed the architecture and AWS cost model for a real-time power-utility data platform sized for about 7,500 sensor messages per second.'
         ],
         technologies: ['.NET 8', 'EF Core', 'SQL Server', 'CQRS', 'MassTransit', 'RabbitMQ', 'Quartz.NET', 'AWS', 'SharePoint', 'Adobe Acrobat Sign']
       }
@@ -118,9 +121,9 @@ const experiences: CompanyStint[] = [
         title: 'Senior Software Engineer',
         period: 'April 2024 - July 2024',
         highlights: [
-          'Migrated a hiring platform from Node.js to .NET 8 with a modular architecture that is easier to scale and extend.',
-          'Delivered major UI features for a leading Angular-based project management product.',
-          'Reviewed code and mentored teammates to keep quality consistent.'
+          'Migrated a hiring platform from Node.js to .NET 8, restructuring it as a modular monolith that is easier to scale and extend.',
+          'Delivered major UI features, including task management, for a leading Angular-based project management product.',
+          'Reviewed pull requests and mentored teammates.'
         ],
         technologies: ['.NET 8', 'C#', 'Angular', 'TypeScript', 'Modular Monolith', 'Node.js']
       },
@@ -130,11 +133,11 @@ const experiences: CompanyStint[] = [
         highlights: [
           'Migrated the US dental practice system Denticon from VB.NET 3.5 to C# .NET 6, preparing it for Azure cloud services.',
           'Implemented Microsoft Entra single sign-on (OAuth2/OIDC) for a multi-tenant B2B SaaS platform with 100k+ users.',
-          'Fixed high-priority production issues, including unauthorised data access, with a central authorization layer across APIs.'
+          'Fixed high-priority production issues, including unauthorised data access, with a central policy-based (PBAC) authorization layer across APIs.'
         ],
         more: [
           'Introduced onion architecture to split services into clean, modular layers.',
-          "Built a serverless email service with Azure Functions and Service Bus that sends mail from clients' own accounts and scales independently."
+          "Built a serverless email service with Azure Functions and Service Bus that sends mail from clients' own accounts with their own templates, and scales independently."
         ],
         technologies: ['.NET 6', 'C#', 'Azure Functions', 'Azure Service Bus', 'Microsoft Entra', 'SQL Server', 'VB.NET']
       }

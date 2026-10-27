@@ -97,7 +97,7 @@ const skillCategories = [
       { name: 'Tempo', level: 65 },
       { name: 'Loki', level: 65 }
     ],
-    also: ['GitHub Actions']
+    also: ['GitHub Actions', 'GitLab CI/CD']
   },
   {
     id: 5,
