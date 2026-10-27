@@ -3,7 +3,6 @@ import { useState } from 'react';
 interface Role {
   title: string;
   period: string;
-  summary?: string;
   highlights: string[];
   more?: string[];
   technologies: string[];
@@ -15,6 +14,7 @@ interface CompanyStint {
   companyUrl: string;
   location: string;
   period: string;
+  description: string;
   roles: Role[];
 }
 
@@ -27,6 +27,7 @@ const experiences: CompanyStint[] = [
     companyUrl: 'https://www.infinitibit.com/',
     location: 'Dhaka, Bangladesh',
     period: 'August 2026 - Present',
+    description: 'Germany-based startup that moved from software services to building its own AI products for businesses, such as automated tax compliance.',
     roles: [
       {
         title: 'Senior Backend Developer',
@@ -53,11 +54,11 @@ const experiences: CompanyStint[] = [
     companyUrl: 'https://www.netpower.no/',
     location: 'Dhaka, Bangladesh',
     period: 'April 2026 - July 2026',
+    description: 'Norway-based software company building quality management systems that help businesses manage workplace quality, safety and regulatory compliance.',
     roles: [
       {
         title: 'Senior Software Engineer (Backend)',
         period: 'April 2026 - July 2026',
-        summary: 'Norway-based quality management system focused on workplace quality, safety and regulations.',
         highlights: [
           'Built a .NET 10 document intelligence service with smart chunking, sparse vectors and dense embeddings using Microsoft.Extensions.AI.',
           'Led development of a shared background job system for Certain QMS microservices, building a custom RRULE scheduler with iCal.NET, Quartz.NET for execution, and OpenTelemetry for tracing.',
@@ -77,6 +78,7 @@ const experiences: CompanyStint[] = [
     companyUrl: 'https://www.infinitibit.com/',
     location: 'Dhaka, Bangladesh',
     period: 'November 2024 - March 2026',
+    description: 'Germany-based software services company building custom software and AI solutions for enterprise clients in sectors such as energy and tax.',
     roles: [
       {
         title: 'Senior Backend Developer',
@@ -116,6 +118,7 @@ const experiences: CompanyStint[] = [
     companyUrl: 'https://www.enosisbd.com/',
     location: 'Dhaka, Bangladesh',
     period: 'January 2022 - July 2024',
+    description: 'Bangladesh-based software consultancy that builds and modernises software products for its clients, mostly in North America.',
     roles: [
       {
         title: 'Senior Software Engineer',
@@ -171,6 +174,9 @@ const Experience = () => {
                   <span className="mx-2">•</span>
                   <span className="text-blue-600 dark:text-blue-400">{company.period}</span>
                 </div>
+                <p className="mt-1 italic text-gray-600 dark:text-gray-400">
+                  {company.description}
+                </p>
               </div>
 
               {/* Roles: one continuous bar (first role to last role), a dot per role */}
@@ -196,12 +202,6 @@ const Experience = () => {
                         <p className="text-sm text-blue-600 dark:text-blue-400 mb-3">
                           {role.period}
                         </p>
-
-                        {role.summary && (
-                          <p className="italic text-gray-600 dark:text-gray-400 mb-3">
-                            {role.summary}
-                          </p>
-                        )}
 
                         <ul id={`${key}-points`} className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 mb-4">
                           {shown.map((item, index) => (
