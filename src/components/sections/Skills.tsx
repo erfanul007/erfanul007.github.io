@@ -16,8 +16,8 @@ const skillCategories = [
       { name: 'Python', level: 90 },
       { name: 'C/C++', level: 85 },
       { name: 'TypeScript', level: 70 },
-      { name: 'Go', level: 70 },
-      { name: 'Java', level: 65 }
+      { name: 'Go', level: 60 },
+      { name: 'Java', level: 55 }
     ]
   },
   {
@@ -31,13 +31,13 @@ const skillCategories = [
     ),
     skills: [
       { name: '.NET', level: 95 },
-      { name: 'FastAPI', level: 85 },
+      { name: 'FastAPI', level: 90 },
       { name: 'Clean Architecture', level: 80 },
-      { name: 'RabbitMQ', level: 75 },
+      { name: 'RabbitMQ', level: 80 },
       { name: 'DDD', level: 75 },
-      { name: 'Node.js', level: 70 }
+      { name: 'Node.js', level: 60 }
     ],
-    also: ['xUnit']
+    also: ['xUnit', 'pytest', 'Quartz.NET', 'MassTransit', 'Celery', 'CQRS', 'Microservices', 'Event-Driven Systems']
   },
   {
     id: 3,
@@ -52,12 +52,12 @@ const skillCategories = [
     skills: [
       { name: 'Agent Workflows', level: 90 },
       { name: 'RAG', level: 85 },
-      { name: 'Local LLMs', level: 85 },
+      { name: 'Local LLMs', level: 80 },
       { name: 'GraphRAG', level: 80 },
       { name: 'Vector Search', level: 80 },
       { name: 'Microsoft.Extensions.AI', level: 70 }
     ],
-    also: ['Orca ADE', 'Claude Code', 'Embeddings']
+    also: ['CrewAI', 'GraphBit', 'LiteLLM', 'Orca ADE', 'Claude Code', 'Graphify', 'Embeddings']
   },
   {
     id: 4,
@@ -72,13 +72,32 @@ const skillCategories = [
     ),
     skills: [
       { name: 'EF Core', level: 90 },
-      { name: 'Azure', level: 85 },
-      { name: 'AWS', level: 85 },
       { name: 'SQL Server', level: 85 },
-      { name: 'PostgreSQL', level: 80 },
-      { name: 'Qdrant', level: 75 }
+      { name: 'PostgreSQL', level: 85 },
+      { name: 'Azure', level: 80 },
+      { name: 'AWS', level: 75 },
+      { name: 'Neo4j', level: 70 }
     ],
-    also: ['MS Graph', 'SharePoint', 'Snowflake', 'Adobe eSign', 'Microsoft Foundry']
+    also: ['Redis', 'pgvector', 'Qdrant', 'MS Graph', 'SharePoint', 'Adobe eSign', 'Microsoft Foundry']
+  },
+  {
+    id: 6,
+    name: 'Infrastructure & Observability',
+    short: 'Infra',
+    icon: (
+      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+      </svg>
+    ),
+    skills: [
+      { name: 'Temporal', level: 80 },
+      { name: 'OpenTelemetry', level: 75 },
+      { name: 'Grafana', level: 75 },
+      { name: 'Prometheus', level: 65 },
+      { name: 'Tempo', level: 65 },
+      { name: 'Loki', level: 65 }
+    ],
+    also: ['GitHub Actions', 'GitLab CI/CD']
   },
   {
     id: 5,
@@ -96,8 +115,7 @@ const skillCategories = [
       { name: 'React', level: 75 },
       { name: 'Linux', level: 75 },
       { name: 'Angular', level: 70 }
-    ],
-    also: ['Redis', 'CI/CD']
+    ]
   }
 ];
 
@@ -153,12 +171,12 @@ const Skills = () => {
             </h3>
 
             {/* Category Tabs */}
-            <div className="flex flex-wrap mb-6 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 mb-6 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
               {skillCategories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center gap-2 px-3 py-2 mx-1 my-1 rounded-md text-sm font-medium whitespace-nowrap transition-colors ${activeCategory === category.id
+                  className={`flex items-center justify-center gap-2 px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap transition-colors ${activeCategory === category.id
                     ? 'bg-white dark:bg-gray-700 text-blue-600 dark:text-blue-400 shadow-sm'
                     : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
                     }`}

@@ -28,7 +28,7 @@ A modern, responsive portfolio website showcasing my skills, projects, education
 ## 🏗️ Project Structure
 
 ```
-portfolio-ai/
+erfanul007.github.io/
 ├── public/             # Static assets
 ├── src/
 │   ├── components/     # UI components

@@ -5,8 +5,8 @@ Guidance for AI agents in this repo. Read it fully before you change anything.
 ## Project
 
 A personal portfolio site for one author, Md Erfanul Islam Bhuiyan. It is a
-single-page React app, built to static files and deployed to GitHub Pages under
-the base path `/portfolio-ai/`. No backend, no database, no auth. All shown
+single-page React app, built to static files and deployed to GitHub Pages at the
+user-site root, `/`, by a GitHub Actions workflow. No backend, no database, no auth. All shown
 content is hardcoded in the source.
 
 Stack: React 19, Vite 8, TypeScript 6, Tailwind CSS 4, react-router-dom 7, and
@@ -19,7 +19,7 @@ is ESM, so every config file uses import and export.
 - `npm run build` runs `tsc -b` then `vite build`; it type-checks and bundles.
 - `npm run lint` runs ESLint; it must pass with zero errors.
 - `npm run preview` serves the built output for a local check.
-- `npm run deploy` builds first, then publishes `dist` with gh-pages.
+- Deploys run from `.github/workflows/deploy.yml`; there is no deploy script.
 
 ## Layout of the code
 
@@ -29,8 +29,8 @@ Static files and the Pages redirect helper sit in `public`.
 
 ## Architecture
 
-- `App.tsx` runs the router. Its base name comes from the Vite config: it is
-  `/portfolio-ai/` in production and `/` in development.
+- `App.tsx` runs the router. Its base name comes from the Vite config, which is
+  `/` in production and development.
 - Routes are home to Hero, then experience, education, projects, skills, and
   contact. Every route is wrapped in the shared `Layout`.
 - Each file in `pages` is a thin wrapper that renders its section. Put real
@@ -42,7 +42,8 @@ Static files and the Pages redirect helper sit in `public`.
 - The navigation context derives the current section from the route during
   render. Do not add an effect plus state to track it again.
 - Users move between sections with arrow keys, swipe, side arrows, and progress
-  dots. A timed fade plays between routes.
+  dots. The side arrows show from `lg` up, where `main` pads its sides to keep
+  content clear of them. A timed fade plays between routes.
 
 ## Conventions
 
@@ -74,8 +75,8 @@ read that one sections array, so update the array, not each widget.
 
 ## GitHub Pages notes
 
-- The production base path is `/portfolio-ai/`. Never hardcode an absolute asset
-  path; read the Vite base URL value instead.
+- The production base path is `/`. Never hardcode an absolute asset path; read
+  the Vite base URL value instead.
 - The index page and `public/404.html` hold the redirect helper that makes deep
   links work on Pages. Leave that script in place.
 - Asset inlining is off on purpose, so assets stay as separate files.
@@ -96,8 +97,8 @@ Data you can trust:
 - Never invent or change personal facts: dates, grades, awards, titles, email,
   phone, links, or the resume link. The author is the only source.
 - The section arrays are the single source of truth for content.
-- When you touch content, flag stale or clashing data. For example, the README
-  email differs from the contact section, and the README links a removed license.
+- When you touch content, flag stale or clashing data, such as the README or the
+  resume disagreeing with a section array.
 - Before you rely on an outside link or the resume link, check it still opens.
 
 Code hygiene:

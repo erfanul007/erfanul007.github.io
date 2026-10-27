@@ -5,11 +5,12 @@ import { useState, useEffect } from 'react';
 const baseUrl = import.meta.env.BASE_URL;
 
 const titles = [
+  'Senior Backend Developer',
+  'AI Engineer',
+  'Product Engineer',
   'Senior Software Engineer',
   '.NET Developer',
-  'Competitive Programmer',
-  'Senior Backend Developer',
-  'AI Solution Expert'
+  'Competitive Programmer'
 ];
 
 // Skip the typewriter animation for users who prefer reduced motion.
@@ -74,8 +75,8 @@ const Hero = () => {
               <span className="typewriter">{displayText}</span>
               <span className="cursor-blink">|</span>
             </h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-lg">
-              Backend and AI-focused Software Engineer with 4.5+ years building enterprise SaaS platforms, scalable AI-powered workflows, and event-driven distributed systems. I turn complex business requirements into reliable services across .NET, Python, and RAG, and specialize in the AI-driven software development lifecycle to speed up delivery.
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-xl text-pretty">
+              Backend and AI-focused Software Engineer with 4.5+ years building enterprise SaaS platforms and event-driven distributed systems. I turn complex business requirements into reliable services in .NET and Python, build RAG and AI-agent workflows, and use AI across the software development lifecycle to speed up delivery.
             </p>
             <div className="flex flex-wrap gap-4">
               <button

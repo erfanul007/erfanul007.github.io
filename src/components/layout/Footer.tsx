@@ -1,13 +1,11 @@
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="bg-white dark:bg-gray-900 py-6 border-t border-gray-200 dark:border-gray-700 md:fixed md:bottom-0 md:left-0 md:right-0 md:z-40">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-gray-700 dark:text-gray-300 text-center md:text-left text-sm">
-              &copy; {currentYear} Md Erfanul Islam Bhuiyan. All rights reserved.
+              &copy; Md Erfanul Islam Bhuiyan.
             </p>
           </div>
           

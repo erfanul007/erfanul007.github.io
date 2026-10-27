@@ -17,7 +17,7 @@ const SectionNavigation = () => {
       <button
         onClick={navigateToPrevSection}
         disabled={isFirstSection}
-        className={`fixed left-6 top-1/2 transform -translate-y-1/2 z-40 group ${
+        className={`hidden lg:block fixed left-6 top-1/2 transform -translate-y-1/2 z-40 group ${
           isFirstSection ? 'opacity-30 cursor-not-allowed' : 'hover:scale-110 transition-transform'
         }`}
         aria-label={prevSectionName ? `Go to ${prevSectionName}` : 'No previous section'}
@@ -44,7 +44,7 @@ const SectionNavigation = () => {
       <button
         onClick={navigateToNextSection}
         disabled={isLastSection}
-        className={`fixed right-6 top-1/2 transform -translate-y-1/2 z-40 group ${
+        className={`hidden lg:block fixed right-6 top-1/2 transform -translate-y-1/2 z-40 group ${
           isLastSection ? 'opacity-30 cursor-not-allowed' : 'hover:scale-110 transition-transform'
         }`}
         aria-label={nextSectionName ? `Go to ${nextSectionName}` : 'No next section'}
