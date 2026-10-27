@@ -42,7 +42,8 @@ Static files and the Pages redirect helper sit in `public`.
 - The navigation context derives the current section from the route during
   render. Do not add an effect plus state to track it again.
 - Users move between sections with arrow keys, swipe, side arrows, and progress
-  dots. A timed fade plays between routes.
+  dots. The side arrows show from `lg` up, where `main` pads its sides to keep
+  content clear of them. A timed fade plays between routes.
 
 ## Conventions
 
