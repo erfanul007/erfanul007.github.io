@@ -37,7 +37,7 @@ const skillCategories = [
       { name: 'DDD', level: 75 },
       { name: 'Node.js', level: 70 }
     ],
-    also: ['xUnit']
+    also: ['xUnit', 'Quartz.NET', 'MassTransit', 'Microservices', 'Event-Driven Systems']
   },
   {
     id: 3,
@@ -57,7 +57,7 @@ const skillCategories = [
       { name: 'Vector Search', level: 80 },
       { name: 'Microsoft.Extensions.AI', level: 70 }
     ],
-    also: ['Orca ADE', 'Claude Code', 'Embeddings']
+    also: ['CrewAI', 'LiteLLM', 'Bifrost', 'Orca ADE', 'Claude Code', 'Graphify', 'Embeddings']
   },
   {
     id: 4,
@@ -78,7 +78,26 @@ const skillCategories = [
       { name: 'PostgreSQL', level: 80 },
       { name: 'Qdrant', level: 75 }
     ],
-    also: ['MS Graph', 'SharePoint', 'Snowflake', 'Adobe eSign', 'Microsoft Foundry']
+    also: ['Neo4j', 'MS Graph', 'SharePoint', 'Adobe eSign', 'Microsoft Foundry']
+  },
+  {
+    id: 6,
+    name: 'Infrastructure & Observability',
+    short: 'Infra',
+    icon: (
+      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+      </svg>
+    ),
+    skills: [
+      { name: 'OpenTelemetry', level: 80 },
+      { name: 'Grafana', level: 80 },
+      { name: 'Prometheus', level: 75 },
+      { name: 'Temporal', level: 75 },
+      { name: 'Tempo', level: 70 },
+      { name: 'Loki', level: 70 }
+    ],
+    also: ['GitLab CI/CD']
   },
   {
     id: 5,
@@ -97,7 +116,7 @@ const skillCategories = [
       { name: 'Linux', level: 75 },
       { name: 'Angular', level: 70 }
     ],
-    also: ['Redis', 'CI/CD']
+    also: ['Redis']
   }
 ];
 
