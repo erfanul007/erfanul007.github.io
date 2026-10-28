@@ -42,6 +42,7 @@ const experiences: CompanyStint[] = [
         more: [
           'Built tooling to create, monitor and sync the tax-law knowledge graph for each customer, with human approval before any law change goes live.',
           'Implemented observability with OpenTelemetry, Grafana, Tempo, Loki and Prometheus, so failures across the API, workers and LLM calls can be traced in one place.',
+          'Set up Bifrost with the DevOps team as a central AI gateway, giving every developer and app its own virtual API key to monitor and control token costs across providers.',
           'Introduced an AI-driven delivery workflow with Claude Code, reviewed 35+ pull requests and mentored two junior developers.'
         ],
         technologies: ['Python', 'FastAPI', 'PostgreSQL', 'Temporal', 'RabbitMQ', 'OpenTelemetry', 'Grafana', 'Knowledge Graph', 'AI Agents', 'Multi-tenant SaaS']

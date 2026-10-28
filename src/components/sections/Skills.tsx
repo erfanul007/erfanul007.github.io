@@ -57,7 +57,7 @@ const skillCategories = [
       { name: 'Vector Search', level: 80 },
       { name: 'Microsoft.Extensions.AI', level: 70 }
     ],
-    also: ['CrewAI', 'GraphBit', 'LiteLLM', 'Orca ADE', 'Claude Code', 'Graphify', 'Embeddings']
+    also: ['CrewAI', 'GraphBit', 'LiteLLM', 'Bifrost', 'Orca ADE', 'Claude Code', 'Graphify', 'Embeddings']
   },
   {
     id: 4,
