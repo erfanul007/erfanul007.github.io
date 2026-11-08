@@ -11,7 +11,7 @@ interface Role {
 interface CompanyStint {
   id: string;
   company: string;
-  companyUrl: string;
+  companyUrl?: string;
   location: string;
   period: string;
   description: string;
@@ -22,16 +22,34 @@ interface CompanyStint {
 // `highlights` are always shown; `more` sits behind a per-role "Show more" toggle.
 const experiences: CompanyStint[] = [
   {
-    id: 'infinitibit-current',
+    id: 'career-break',
+    company: 'Career break',
+    location: 'Berlin, Germany',
+    period: 'November 2026 - Present',
+    description: 'Relocated from Dhaka to Berlin in November 2026 to begin a new professional chapter.',
+    roles: [
+      {
+        title: 'Relocation',
+        period: 'November 2026 - Present',
+        highlights: [
+          'Bringing around 5 years of experience in backend engineering, distributed systems, enterprise SaaS and AI-powered solutions to engineering roles in Germany.',
+          'Holding a German Opportunity Card (Chancenkarte), with an EU Blue Card route on a qualifying job offer; available for interviews and trial work in Berlin.'
+        ],
+        technologies: []
+      }
+    ]
+  },
+  {
+    id: 'infinitibit-2026',
     company: 'InfinitiBit',
     companyUrl: 'https://www.infinitibit.com/',
     location: 'Dhaka, Bangladesh',
-    period: 'August 2026 - Present',
+    period: 'August 2026 - October 2026',
     description: 'Germany-based startup that moved from software services to building its own AI products for businesses, such as automated tax compliance.',
     roles: [
       {
         title: 'Senior Backend Developer',
-        period: 'August 2026 - Present',
+        period: 'August 2026 - October 2026',
         highlights: [
           'Architected the backend of an AI VAT validation product that checks invoices against German and EU tax law and cites the exact legal provision behind every verdict.',
           'Evolved the proof of concept into a multi-tenant SaaS MVP, adding single sign-on, role-based access, per-customer storage, credit billing and audit logs.',
@@ -45,7 +63,7 @@ const experiences: CompanyStint[] = [
           'Set up Bifrost with the DevOps team as a central AI gateway, giving every developer and app its own virtual API key to monitor and control token costs across providers.',
           'Introduced an AI-driven delivery workflow with Claude Code, reviewed 35+ pull requests and mentored two junior developers.'
         ],
-        technologies: ['Python', 'FastAPI', 'PostgreSQL', 'Temporal', 'RabbitMQ', 'OpenTelemetry', 'Grafana', 'Knowledge Graph', 'AI Agents', 'Multi-tenant SaaS']
+        technologies: ['Python', 'FastAPI', 'PostgreSQL', 'Temporal', 'RabbitMQ', 'OpenTelemetry', 'Grafana', 'Knowledge Graph', 'AI Agents', 'LangGraph', 'Multi-tenant SaaS']
       }
     ]
   },
@@ -109,7 +127,7 @@ const experiences: CompanyStint[] = [
           'Added exchange-rate management so commercial offers convert currency per work package.',
           'Designed the architecture and AWS cost model for a real-time power-utility data platform sized for about 7,500 sensor messages per second.'
         ],
-        technologies: ['.NET 8', 'EF Core', 'SQL Server', 'CQRS', 'MassTransit', 'RabbitMQ', 'Quartz.NET', 'AWS', 'SharePoint', 'Adobe Acrobat Sign']
+        technologies: ['.NET 8', 'EF Core', 'SQL Server', 'Snowflake', 'CQRS', 'MassTransit', 'RabbitMQ', 'Quartz.NET', 'AWS', 'SharePoint', 'Adobe Acrobat Sign']
       }
     ]
   },
@@ -166,9 +184,11 @@ const Experience = () => {
               {/* Company header, aligned to the left edge */}
               <div className="mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  <a href={company.companyUrl} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                    {company.company}
-                  </a>
+                  {company.companyUrl ? (
+                    <a href={company.companyUrl} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                      {company.company}
+                    </a>
+                  ) : company.company}
                 </h3>
                 <div className="flex flex-wrap items-center text-gray-700 dark:text-gray-300">
                   <span>{company.location}</span>

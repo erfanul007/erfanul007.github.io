@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 const baseUrl = import.meta.env.BASE_URL;
 
 const titles = [
+  'Backend & AI Engineer',
   'Senior Backend Developer',
   'AI Engineer',
   'Product Engineer',
@@ -76,7 +77,7 @@ const Hero = () => {
               <span className="cursor-blink">|</span>
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-xl text-pretty">
-              Backend and AI-focused Software Engineer with 4.5+ years building enterprise SaaS platforms and event-driven distributed systems. I turn complex business requirements into reliable services in .NET and Python, build RAG and AI-agent workflows, and use AI across the software development lifecycle to speed up delivery.
+              Backend and AI-focused Software Engineer with around 5 years building enterprise SaaS platforms and event-driven distributed systems. I turn complex business requirements into reliable services in .NET and Python, build RAG and AI-agent workflows, and use AI across the software development lifecycle to speed up delivery.
             </p>
             <div className="flex flex-wrap gap-4">
               <button
@@ -85,8 +86,9 @@ const Hero = () => {
               >
                 Contact Me
               </button>
+              {/* A snapshot of the general resume in CareerOps; re-export it there after editing the resume. */}
               <a
-                href="https://app.flowcv.com/api/public/download_resume?token=f7g2kq4ieaub"
+                href={`${baseUrl}Md-Erfanul-Islam-Bhuiyan-Resume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-md hover:bg-blue-600 hover:text-white dark:hover:text-white transition-colors flex items-center gap-2"
