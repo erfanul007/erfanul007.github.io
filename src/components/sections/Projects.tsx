@@ -5,7 +5,7 @@ const projects = [
     title: 'Paceframe',
     subtitle: 'Goal and performance management platform',
     description: 'A web app for small organisations covering goal tracking, continuous check-ins, and weighted quarterly reviews with approval workflows. Designed the domain model and system architecture, and developed the modular-monolith backend and React frontend.',
-    technologies: ['C# .NET', 'PostgreSQL', 'React', 'TypeScript', 'Docker'],
+    technologies: ['C# .NET', 'PostgreSQL', 'React', 'TypeScript', 'MCP Server', 'Docker'],
     image: 'paceframe.png',
     live: 'https://paceframe.erfanul.com/'
   },

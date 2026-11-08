@@ -57,7 +57,7 @@ const skillCategories = [
       { name: 'Vector Search', level: 80 },
       { name: 'Microsoft.Extensions.AI', level: 70 }
     ],
-    also: ['CrewAI', 'GraphBit', 'LiteLLM', 'Bifrost', 'Orca ADE', 'Claude Code', 'Graphify', 'Embeddings']
+    also: ['CrewAI', 'GraphBit', 'LangGraph', 'MCP Servers', 'LiteLLM', 'Bifrost', 'Orca ADE', 'Claude Code', 'Graphify', 'Embeddings']
   },
   {
     id: 4,
@@ -78,7 +78,7 @@ const skillCategories = [
       { name: 'AWS', level: 75 },
       { name: 'Neo4j', level: 70 }
     ],
-    also: ['Redis', 'pgvector', 'Qdrant', 'MS Graph', 'SharePoint', 'Adobe eSign', 'Microsoft Foundry']
+    also: ['Redis', 'pgvector', 'Qdrant', 'Snowflake', 'MS Graph', 'SharePoint', 'Adobe eSign', 'Microsoft Foundry']
   },
   {
     id: 6,
