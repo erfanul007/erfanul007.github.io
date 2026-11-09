@@ -26,16 +26,16 @@ const experiences: CompanyStint[] = [
     company: 'Career break',
     location: 'Berlin, Germany',
     period: 'November 2026 - Present',
-    description: 'Relocated from Dhaka to Berlin in November 2026 to begin a new professional chapter.',
+    description: 'Relocated to Berlin and actively looking for a full-time software engineering role.',
     roles: [
       {
-        title: 'Relocation',
+        title: 'Open to work',
         period: 'November 2026 - Present',
         highlights: [
-          'Bringing around 5 years of experience in backend engineering, distributed systems, enterprise SaaS and AI-powered solutions to engineering roles in Germany.',
-          'Holding a German Opportunity Card (Chancenkarte), with an EU Blue Card route on a qualifying job offer; available for interviews and trial work in Berlin.'
+          'Available to start now, anywhere in Germany, on a German Opportunity Card (Chancenkarte).',
+          'Alongside, building my own web and mobile apps for team performance reviews, AI-assisted job search and expense tracking.'
         ],
-        technologies: []
+        technologies: ['.NET 10', 'React', 'TypeScript', 'PostgreSQL', 'Kotlin Multiplatform', 'Docker', 'Claude Code']
       }
     ]
   },
