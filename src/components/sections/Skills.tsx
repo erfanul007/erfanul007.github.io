@@ -16,9 +16,10 @@ const skillCategories = [
       { name: 'Python', level: 90 },
       { name: 'C/C++', level: 85 },
       { name: 'TypeScript', level: 70 },
-      { name: 'Go', level: 60 },
-      { name: 'Java', level: 55 }
-    ]
+      { name: 'Kotlin', level: 65 },
+      { name: 'Go', level: 60 }
+    ],
+    also: ['Java']
   },
   {
     id: 2,
