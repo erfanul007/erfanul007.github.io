@@ -10,6 +10,15 @@ const projects = [
     live: 'https://paceframe.erfanul.com/'
   },
   {
+    id: 5,
+    title: 'ExpenseXpert',
+    subtitle: 'Expense tracker and bill splitter',
+    description: 'A mobile app for trips and everyday money that splits group costs across a shared fund and direct payments, and keeps personal wallets right to the cent. Made the product and architecture decisions and built it with Kotlin Multiplatform for Android and iOS, backed by 650+ automated tests.',
+    technologies: ['Kotlin Multiplatform', 'Compose Multiplatform', 'Room', 'Koin', 'SQLite'],
+    image: 'expensexpert.png',
+    live: 'https://expensexpert.erfanul.com/'
+  },
+  {
     id: 1,
     title: 'Rust AI Agent Hub',
     subtitle: 'High-performance CLI chatbot with AI agents',
@@ -44,15 +53,6 @@ const projects = [
     technologies: ['Django', 'Python', 'PostgreSQL', 'HTML', 'CSS', 'JavaScript'],
     image: 'greendivision_logo.jpg',
     github: 'https://github.com/smhimran/GreenDivision'
-  },
-  {
-    id: 5,
-    title: 'ExpenseXpert',
-    subtitle: 'Group expense management app',
-    description: 'An Android application designed to manage group expenses, especially for events such as group tours, simplifying individual expense calculations.',
-    technologies: ['Android', 'Java', 'SQLite', 'Material Design'],
-    image: 'expensexpert_logo.jpg',
-    github: 'https://github.com/erfanul007/ExpenseXpert'
   }
 ];
 
